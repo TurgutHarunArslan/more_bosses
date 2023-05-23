@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "0 2",
+    "3 5"
+  ],
+  "key": {
+    "0": {
+      "item": "more_bosses:fire_feather"
+    },
+    "2": {
+      "item": "more_bosses:fire_feather"
+    },
+    "3": {
+      "item": "more_bosses:fire_feather"
+    },
+    "5": {
+      "item": "more_bosses:fire_feather"
+    }
+  },
+  "result": {
+    "item": "more_bosses:fire_boots",
+    "count": 1
+  }
+}

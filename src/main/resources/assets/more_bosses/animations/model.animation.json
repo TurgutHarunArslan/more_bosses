@@ -1,0 +1,27 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.model.idle": {
+			"loop": true
+		},
+		"animation.model.attack": {
+			"animation_length": 0.29167,
+			"bones": {
+				"legpart": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, -55, 0]
+						},
+						"0.1667": {
+							"vector": [0, 0, 0]
+						},
+						"0.2917": {
+							"vector": [180, 0, 0]
+						}
+					}
+				}
+			}
+		}
+	},
+	"geckolib_format_version": 2
+}

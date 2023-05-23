@@ -1,0 +1,58 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"fenix.animation.idle": {
+			"loop": true,
+			"animation_length": 0.33333,
+			"bones": {
+				"Lwing": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 20]
+						},
+						"0.1667": {
+							"vector": [0, 0, 0]
+						},
+						"0.3333": {
+							"vector": [0, 0, 20]
+						}
+					}
+				},
+				"Rwing": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, -20]
+						},
+						"0.1667": {
+							"vector": [0, 0, 0]
+						},
+						"0.3333": {
+							"vector": [0, 0, -20]
+						}
+					}
+				}
+			}
+		},
+		"fenix.model.attack.dash": {
+			"animation_length": 1.375,
+			"bones": {
+				"Head": {
+					"position": {
+						"vector": [0, -2, 0]
+					}
+				},
+				"Lwing": {
+					"rotation": {
+						"vector": [0, -50, 0]
+					}
+				},
+				"Rwing": {
+					"rotation": {
+						"vector": [0, 50, 0]
+					}
+				}
+			}
+		}
+	},
+	"geckolib_format_version": 2
+}

@@ -1,0 +1,344 @@
+{
+  "mod_elements": [
+    {
+      "name": "MoreBosses",
+      "type": "tab",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "more_bosses",
+      "metadata": {
+        "files": []
+      }
+    },
+    {
+      "name": "FireFeather",
+      "type": "item",
+      "sortid": 2,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fire_feather",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/morebosses/item/FireFeatherItem.java",
+          "src/main/resources/assets/more_bosses/models/item/fire_feather.json"
+        ]
+      }
+    },
+    {
+      "name": "Fire",
+      "type": "armor",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fire",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/more_bosses/models/item/fire_chestplate.json",
+          "src/main/java/net/mcreator/morebosses/item/FireItem.java",
+          "src/main/resources/assets/more_bosses/models/item/fire_boots.json",
+          "src/main/resources/assets/more_bosses/models/item/fire_leggings.json",
+          "src/main/resources/assets/more_bosses/models/item/fire_helmet.json"
+        ]
+      }
+    },
+    {
+      "name": "CustomArmour1",
+      "type": "recipe",
+      "sortid": 4,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "custom_armour_1",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/more_bosses/recipes/phoenixboots.json"
+        ]
+      }
+    },
+    {
+      "name": "Customarmour2",
+      "type": "recipe",
+      "sortid": 3,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "customarmour_2",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/more_bosses/recipes/customarmour_3.json"
+        ]
+      }
+    },
+    {
+      "name": "Customarmour3",
+      "type": "recipe",
+      "sortid": 5,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "customarmour_3",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/more_bosses/recipes/customarmour_3.json"
+        ]
+      }
+    },
+    {
+      "name": "Customarmour4",
+      "type": "recipe",
+      "sortid": 6,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "customarmour_4",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/more_bosses/recipes/customarmour_4.json"
+        ]
+      }
+    },
+    {
+      "name": "FireBodyTickEvent",
+      "type": "procedure",
+      "sortid": 9,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fire_body_tick_event",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/morebosses/procedures/FireBodyTickEventProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "PhoenixOnEntityTickUpdate",
+      "type": "procedure",
+      "sortid": 8,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "phoenix_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/morebosses/procedures/PhoenixOnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Test",
+      "type": "rangeditem",
+      "sortid": 11,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "test",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/more_bosses/models/item/test.json",
+          "src/main/java/net/mcreator/morebosses/entity/TestEntity.java",
+          "src/main/java/net/mcreator/morebosses/item/TestItem.java"
+        ]
+      }
+    },
+    {
+      "name": "TestProjectileHitsBlock",
+      "type": "procedure",
+      "sortid": 12,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "test_projectile_hits_block",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/morebosses/procedures/TestProjectileHitsBlockProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Teleportitem",
+      "type": "item",
+      "sortid": 13,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "teleportitem",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/morebosses/item/TeleportitemItem.java",
+          "src/main/resources/assets/more_bosses/models/item/teleportitem.json"
+        ]
+      }
+    },
+    {
+      "name": "TeleportitemRightclicked",
+      "type": "procedure",
+      "sortid": 14,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "teleportitem_rightclicked",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/morebosses/procedures/TeleportitemRightclickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Testenitity",
+      "type": "procedure",
+      "sortid": 15,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "testenitity",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/morebosses/procedures/TestenitityProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Setnbtforphoenix",
+      "type": "procedure",
+      "sortid": 16,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "setnbtforphoenix",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/morebosses/procedures/SetnbtforphoenixProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Phoenixa",
+      "type": "animatedentity",
+      "sortid": 17,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "phoenixa",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/morebosses/entity/PhoenixaEntity.java",
+          "src/main/resources/assets/more_bosses/models/item/phoenixa_spawn_egg.json",
+          "src/main/java/net/mcreator/morebosses/entity/model/PhoenixaModel.java",
+          "src/main/java/net/mcreator/morebosses/client/renderer/PhoenixaRenderer.java",
+          "src/main/resources/data/more_bosses/forge/biome_modifier/phoenixa_biome_modifier.json"
+        ]
+      }
+    },
+    {
+      "name": "Dash",
+      "type": "enchantment",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dash",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/morebosses/enchantment/DashEnchantment.java"
+        ]
+      }
+    }
+  ],
+  "variable_elements": [],
+  "sound_elements": [],
+  "language_map": {
+    "en_us": {
+      "item.more_bosses.fire_helmet": "Fire Helmet",
+      "entity.more_bosses.phoenixa": "Phoenixa",
+      "item.more_bosses.phoenixa_spawn_egg": "Phoenixa Spawn Egg",
+      "item.more_bosses.teleportitem": "teleport",
+      "item.more_bosses.fire_leggings": "Fire Leggings",
+      "item.more_bosses.fire_feather": "Fire Feather",
+      "enchantment.more_bosses.dash": "Dash",
+      "item.more_bosses.fire_chestplate": "Fire Body",
+      "item.more_bosses.fire_boots": "Fire Boots",
+      "itemGroup.tabmore_bosses": "More Bosses",
+      "item.more_bosses.test": "Shooting thing"
+    }
+  },
+  "foldersRoot": {
+    "name": "~",
+    "children": []
+  },
+  "workspaceSettings": {
+    "modid": "more_bosses",
+    "modName": "More Bosses",
+    "version": "1.0.0",
+    "author": "Splatoon4ik, MCreator",
+    "websiteURL": "https://mcreator.net",
+    "license": "Academic Free License v3.0",
+    "disableForgeVersionCheck": true,
+    "serverSideOnly": false,
+    "requiredMods": [],
+    "dependencies": [],
+    "dependants": [],
+    "mcreatorDependencies": [
+      "geckolib"
+    ],
+    "currentGenerator": "forge-1.19.2",
+    "credits": "Created using mod maker MCreator - https://mcreator.net/about",
+    "modElementsPackage": "net.mcreator.morebosses",
+    "lockBaseModFiles": false
+  },
+  "mcreatorVersion": 202300110610
+}
