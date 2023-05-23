@@ -7,17 +7,18 @@ import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.Explosion;
 import net.minecraft.world.item.enchantment.EnchantmentHelper;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
-import net.minecraft.server.level.ServerLevel;
 import net.minecraft.network.chat.Component;
-import net.minecraft.core.particles.ParticleTypes;
 
 import net.mcreator.morebosses.network.MoreBossesModVariables;
 import net.mcreator.morebosses.init.MoreBossesModEnchantments;
+import net.mcreator.morebosses.MoreBossesMod;
 
 import javax.annotation.Nullable;
 
@@ -41,8 +42,10 @@ public class TpProcedure {
 		if (EnchantmentHelper.getItemEnchantmentLevel(MoreBossesModEnchantments.DASH.get(), (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY)) == 1
 				&& (entity.getCapability(MoreBossesModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MoreBossesModVariables.PlayerVariables())).dashcoldown == 0) {
 			speed = 5;
-			if (world instanceof ServerLevel _level)
-				_level.sendParticles(ParticleTypes.EXPLOSION, x, y, z, 50, 3, 3, 3, 1);
+			MoreBossesMod.queueServerWork(5, () -> {
+				if (world instanceof Level _level && !_level.isClientSide())
+					_level.explode(null, x, y, z, 5, Explosion.BlockInteraction.NONE);
+			});
 			entity.setDeltaMovement(new Vec3((Math.sin(entity.getYRot() * (-1) * 0.017453292) * Math.cos(entity.getXRot() * 0.017453292) * speed), (Math.sin(entity.getXRot() * 0.017453292) * (-1) * speed),
 					(Math.cos(entity.getYRot() * (-1) * 0.017453292) * Math.cos(entity.getXRot() * 0.017453292) * speed)));
 			{

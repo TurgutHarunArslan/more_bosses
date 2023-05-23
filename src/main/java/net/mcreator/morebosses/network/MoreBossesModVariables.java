@@ -68,6 +68,7 @@ public class MoreBossesModVariables {
 			PlayerVariables clone = ((PlayerVariables) event.getEntity().getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()));
 			if (!event.isWasDeath()) {
 				clone.dashcoldown = original.dashcoldown;
+				clone.Dbjumped = original.Dbjumped;
 			}
 		}
 	}
@@ -104,6 +105,7 @@ public class MoreBossesModVariables {
 
 	public static class PlayerVariables {
 		public double dashcoldown = 0.0;
+		public double Dbjumped = 0;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -113,12 +115,14 @@ public class MoreBossesModVariables {
 		public Tag writeNBT() {
 			CompoundTag nbt = new CompoundTag();
 			nbt.putDouble("dashcoldown", dashcoldown);
+			nbt.putDouble("Dbjumped", Dbjumped);
 			return nbt;
 		}
 
 		public void readNBT(Tag Tag) {
 			CompoundTag nbt = (CompoundTag) Tag;
 			dashcoldown = nbt.getDouble("dashcoldown");
+			Dbjumped = nbt.getDouble("Dbjumped");
 		}
 	}
 
@@ -144,6 +148,7 @@ public class MoreBossesModVariables {
 				if (!context.getDirection().getReceptionSide().isServer()) {
 					PlayerVariables variables = ((PlayerVariables) Minecraft.getInstance().player.getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()));
 					variables.dashcoldown = message.data.dashcoldown;
+					variables.Dbjumped = message.data.Dbjumped;
 				}
 			});
 			context.setPacketHandled(true);

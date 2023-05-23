@@ -1,0 +1,12 @@
+{
+  "_fv": 39,
+  "_type": "keybind",
+  "definition": {
+    "triggerKey": "SPACE",
+    "keyBindingName": "DoubleJump",
+    "keyBindingCategoryKey": "more_bosses",
+    "onKeyPressed": {
+      "name": "Doublejump"
+    }
+  }
+}

@@ -299,19 +299,130 @@
           }
         ]
       }
+    },
+    {
+      "name": "Cooldowns",
+      "type": "procedure",
+      "sortid": 19,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cooldowns",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/morebosses/procedures/CooldownsProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Doublejump",
+      "type": "procedure",
+      "sortid": 20,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "doublejump",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/morebosses/procedures/DoublejumpProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Dbjump",
+      "type": "keybind",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dbjump",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/morebosses/network/DbjumpMessage.java"
+        ]
+      }
+    },
+    {
+      "name": "Groundcheck",
+      "type": "procedure",
+      "sortid": 21,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "groundcheck",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/morebosses/procedures/GroundcheckProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Fenixloot",
+      "type": "loottable",
+      "sortid": 22,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fenixloot",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/more_bosses/loot_tables/entities/phoenixa.json"
+        ]
+      }
+    },
+    {
+      "name": "Phoenixsummoner",
+      "type": "item",
+      "sortid": 23,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "phoenixsummoner",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/more_bosses/models/item/phoenixsummoner.json",
+          "src/main/java/net/mcreator/morebosses/item/PhoenixsummonerItem.java"
+        ]
+      }
     }
   ],
-  "variable_elements": [],
+  "variable_elements": [
+    {
+      "name": "dashcoldown",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0.0"
+    },
+    {
+      "name": "Dbjumped",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0"
+    }
+  ],
   "sound_elements": [],
   "language_map": {
     "en_us": {
-      "item.more_bosses.fire_chestplate": "Fire Body",
       "item.more_bosses.fire_helmet": "Fire Helmet",
       "entity.more_bosses.phoenixa": "Phoenixa",
       "item.more_bosses.phoenixa_spawn_egg": "Phoenixa Spawn Egg",
       "item.more_bosses.fire_leggings": "Fire Leggings",
+      "item.more_bosses.phoenixsummoner": "Phoenixsummoner",
       "item.more_bosses.fire_feather": "Fire Feather",
       "enchantment.more_bosses.dash": "Dash",
+      "item.more_bosses.fire_chestplate": "Fire Body",
+      "key.more_bosses.dbjump": "DoubleJump",
       "item.more_bosses.fire_boots": "Fire Boots",
       "itemGroup.tabmore_bosses": "More Bosses",
       "item.more_bosses.test": "Shooting thing"

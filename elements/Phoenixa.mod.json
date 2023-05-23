@@ -85,7 +85,7 @@
     "immuneToWither": false,
     "immuneToDragonBreath": false,
     "mobDrop": {
-      "value": "CUSTOM:FireFeather"
+      "value": ""
     },
     "livingSound": {
       "value": ""
