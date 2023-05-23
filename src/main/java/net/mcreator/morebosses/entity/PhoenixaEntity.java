@@ -288,7 +288,7 @@ public class PhoenixaEntity extends Monster implements IAnimatable {
 		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.3);
 		builder = builder.add(Attributes.MAX_HEALTH, 200);
 		builder = builder.add(Attributes.ARMOR, 100);
-		builder = builder.add(Attributes.ATTACK_DAMAGE, 20);
+		builder = builder.add(Attributes.ATTACK_DAMAGE, 10);
 		builder = builder.add(Attributes.FOLLOW_RANGE, 128);
 		builder = builder.add(Attributes.KNOCKBACK_RESISTANCE, 10);
 		builder = builder.add(Attributes.FLYING_SPEED, 0.3);

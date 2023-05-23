@@ -194,39 +194,6 @@
       }
     },
     {
-      "name": "Teleportitem",
-      "type": "item",
-      "sortid": 13,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "teleportitem",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/morebosses/item/TeleportitemItem.java",
-          "src/main/resources/assets/more_bosses/models/item/teleportitem.json"
-        ]
-      }
-    },
-    {
-      "name": "TeleportitemRightclicked",
-      "type": "procedure",
-      "sortid": 14,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "teleportitem_rightclicked",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/morebosses/procedures/TeleportitemRightclickedProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      }
-    },
-    {
       "name": "Testenitity",
       "type": "procedure",
       "sortid": 15,
@@ -297,9 +264,70 @@
           "src/main/java/net/mcreator/morebosses/enchantment/DashEnchantment.java"
         ]
       }
+    },
+    {
+      "name": "Tp",
+      "type": "procedure",
+      "sortid": 18,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tp",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/morebosses/procedures/TpProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Cooldowns",
+      "type": "procedure",
+      "sortid": 19,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cooldowns",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/morebosses/procedures/CooldownsProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
     }
   ],
-  "variable_elements": [],
+  "variable_elements": [
+    {
+      "name": "dashcoldown",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0.0"
+    }
+  ],
   "sound_elements": [],
   "language_map": {
     "en_us": {
@@ -307,7 +335,6 @@
       "item.more_bosses.fire_helmet": "Fire Helmet",
       "entity.more_bosses.phoenixa": "Phoenixa",
       "item.more_bosses.phoenixa_spawn_egg": "Phoenixa Spawn Egg",
-      "item.more_bosses.teleportitem": "teleport",
       "item.more_bosses.fire_leggings": "Fire Leggings",
       "item.more_bosses.fire_feather": "Fire Feather",
       "enchantment.more_bosses.dash": "Dash",

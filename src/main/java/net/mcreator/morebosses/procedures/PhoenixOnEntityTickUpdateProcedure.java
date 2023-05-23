@@ -2,6 +2,8 @@ package net.mcreator.morebosses.procedures;
 
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.AABB;
+import net.minecraft.world.level.block.state.properties.IntegerProperty;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.ItemStack;
@@ -12,6 +14,7 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.core.BlockPos;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.CommandSource;
 
@@ -27,6 +30,11 @@ public class PhoenixOnEntityTickUpdateProcedure {
 		if (entity == null)
 			return;
 		double speed = 0;
+		if ((((PhoenixaEntity) entity).animationprocedure).equals("empty")) {
+			if (entity instanceof PhoenixaEntity) {
+				((PhoenixaEntity) entity).setAnimation("fenix.model.idle");
+			}
+		}
 		if (entity.getPersistentData().getDouble("AttackVal") == 200) {
 			{
 				Entity _shootFrom = entity;
@@ -65,6 +73,12 @@ public class PhoenixOnEntityTickUpdateProcedure {
 				}
 			}.compareDistOf(x, y, z)).findFirst().orElse(null)) == entity)) {
 				{
+					BlockPos _pos = new BlockPos(x, y, z);
+					BlockState _bs = world.getBlockState(_pos);
+					if (_bs.getBlock().getStateDefinition().getProperty("animation") instanceof IntegerProperty _integerProp)
+						world.setBlock(_pos, _bs.setValue(_integerProp, 0), 3);
+				}
+				{
 					Entity _ent = entity;
 					if (!_ent.level.isClientSide() && _ent.getServer() != null) {
 						_ent.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(), _ent.level instanceof ServerLevel ? (ServerLevel) _ent.level : null, 4,
@@ -75,6 +89,12 @@ public class PhoenixOnEntityTickUpdateProcedure {
 					((PhoenixaEntity) entity).setAnimation("fenix.model.attack.dash");
 				}
 				entity.setDeltaMovement(new Vec3((entity.getLookAngle().x * 1.5), (entity.getLookAngle().y * 1.5), (entity.getLookAngle().z * 1.5)));
+				{
+					BlockPos _pos = new BlockPos(x, y, z);
+					BlockState _bs = world.getBlockState(_pos);
+					if (_bs.getBlock().getStateDefinition().getProperty("animation") instanceof IntegerProperty _integerProp)
+						world.setBlock(_pos, _bs.setValue(_integerProp, 0), 3);
+				}
 			}
 			entity.getPersistentData().putDouble("Dash", 0);
 		} else {

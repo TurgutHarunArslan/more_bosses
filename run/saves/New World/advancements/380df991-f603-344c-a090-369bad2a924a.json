@@ -41,6 +41,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/transportation/dark_oak_boat": {
+    "criteria": {
+      "in_water": "2023-05-23 17:20:41 +0300"
+    },
+    "done": true
+  },
   "minecraft:recipes/building_blocks/pink_wool": {
     "criteria": {
       "has_white_wool": "2023-05-21 16:16:10 +0300"
@@ -56,9 +62,12 @@
   "minecraft:adventure/kill_all_mobs": {
     "criteria": {
       "minecraft:skeleton": "2023-05-18 14:44:12 +0300",
+      "minecraft:spider": "2023-05-23 16:48:30 +0300",
+      "minecraft:creeper": "2023-05-23 16:45:57 +0300",
       "minecraft:slime": "2023-05-17 21:26:54 +0300",
       "minecraft:cave_spider": "2023-05-17 21:23:15 +0300",
-      "minecraft:zombie": "2023-05-22 22:50:19 +0300"
+      "minecraft:zombie": "2023-05-22 22:50:19 +0300",
+      "minecraft:zombie_villager": "2023-05-23 16:48:31 +0300"
     },
     "done": false
   },
@@ -140,6 +149,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/brewing/cauldron": {
+    "criteria": {
+      "has_water_bucket": "2023-05-23 17:20:24 +0300"
+    },
+    "done": true
+  },
   "minecraft:adventure/adventuring_time": {
     "criteria": {
       "minecraft:plains": "2023-05-15 17:56:05 +0300"
@@ -176,9 +191,21 @@
     },
     "done": true
   },
+  "minecraft:recipes/transportation/birch_boat": {
+    "criteria": {
+      "in_water": "2023-05-23 17:20:41 +0300"
+    },
+    "done": true
+  },
   "minecraft:recipes/decorations/painting": {
     "criteria": {
       "has_wool": "2023-05-21 16:16:10 +0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/mangrove_boat": {
+    "criteria": {
+      "in_water": "2023-05-23 17:20:41 +0300"
     },
     "done": true
   },
@@ -197,6 +224,18 @@
   "minecraft:recipes/decorations/white_banner": {
     "criteria": {
       "has_white_wool": "2023-05-21 16:16:10 +0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/acacia_boat": {
+    "criteria": {
+      "in_water": "2023-05-23 17:20:41 +0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/oak_boat": {
+    "criteria": {
+      "in_water": "2023-05-23 17:20:41 +0300"
     },
     "done": true
   },
@@ -224,9 +263,21 @@
     },
     "done": true
   },
+  "minecraft:recipes/transportation/jungle_boat": {
+    "criteria": {
+      "in_water": "2023-05-23 17:20:41 +0300"
+    },
+    "done": true
+  },
   "minecraft:adventure/shoot_arrow": {
     "criteria": {
       "shot_arrow": "2023-05-21 16:16:07 +0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/spruce_boat": {
+    "criteria": {
+      "in_water": "2023-05-23 17:20:41 +0300"
     },
     "done": true
   },

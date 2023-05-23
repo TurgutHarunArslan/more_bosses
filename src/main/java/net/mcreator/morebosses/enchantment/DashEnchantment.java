@@ -12,7 +12,7 @@ import java.util.List;
 
 public class DashEnchantment extends Enchantment {
 	public DashEnchantment(EquipmentSlot... slots) {
-		super(Enchantment.Rarity.COMMON, EnchantmentCategory.BREAKABLE, slots);
+		super(Enchantment.Rarity.VERY_RARE, EnchantmentCategory.WEAPON, slots);
 	}
 
 	@Override

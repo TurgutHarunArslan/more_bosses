@@ -12,7 +12,6 @@ import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraft.world.item.Item;
 
 import net.mcreator.morebosses.item.TestItem;
-import net.mcreator.morebosses.item.TeleportitemItem;
 import net.mcreator.morebosses.item.FireItem;
 import net.mcreator.morebosses.item.FireFeatherItem;
 import net.mcreator.morebosses.MoreBossesMod;
@@ -25,6 +24,5 @@ public class MoreBossesModItems {
 	public static final RegistryObject<Item> FIRE_BOOTS = REGISTRY.register("fire_boots", () -> new FireItem.Boots());
 	public static final RegistryObject<Item> FIRE_FEATHER = REGISTRY.register("fire_feather", () -> new FireFeatherItem());
 	public static final RegistryObject<Item> TEST = REGISTRY.register("test", () -> new TestItem());
-	public static final RegistryObject<Item> TELEPORTITEM = REGISTRY.register("teleportitem", () -> new TeleportitemItem());
 	public static final RegistryObject<Item> PHOENIXA_SPAWN_EGG = REGISTRY.register("phoenixa_spawn_egg", () -> new ForgeSpawnEggItem(MoreBossesModEntities.PHOENIXA, -1, -1, new Item.Properties().tab(MoreBossesModTabs.TAB_MORE_BOSSES)));
 }
